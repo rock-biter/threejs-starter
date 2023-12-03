@@ -14,7 +14,7 @@ import * as dat from 'lil-gui'
 const scene = new THREE.Scene()
 
 /**
- * Manhattan
+ * BOX
  */
 const material = new THREE.MeshNormalMaterial()
 const geometry = new THREE.BoxGeometry(1, 1, 1)
