@@ -2,6 +2,8 @@ import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import * as dat from 'lil-gui'
+import { AmbientLight } from 'three'
+import { DirectionalLight } from 'three'
 
 /**
  * Debug
@@ -16,7 +18,8 @@ const scene = new THREE.Scene()
 /**
  * BOX
  */
-const material = new THREE.MeshNormalMaterial()
+// const material = new THREE.MeshNormalMaterial()
+const material = new THREE.MeshStandardMaterial({ color: 'mediumpurple' })
 const geometry = new THREE.BoxGeometry(1, 1, 1)
 
 const mesh = new THREE.Mesh(geometry, material)
@@ -58,6 +61,13 @@ handleResize()
  */
 const controls = new OrbitControls(camera, renderer.domElement)
 controls.enableDamping = true
+
+/**
+ * Lights
+ */
+const ambientLight = new AmbientLight(0xffffff, 1.5)
+const directionalLight = new DirectionalLight(0xffffff, 4.5)
+scene.add(ambientLight, directionalLight)
 
 /**
  * Three js Clock
