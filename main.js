@@ -19,13 +19,13 @@ const scene = new THREE.Scene()
  * BOX
  */
 // const material = new THREE.MeshNormalMaterial()
-const material = new THREE.MeshStandardMaterial({ color: 'mediumpurple' })
+const material = new THREE.MeshStandardMaterial({ color: 'coral' })
 const geometry = new THREE.BoxGeometry(1, 1, 1)
 
 /**
  * Plane
  */
-const groundMaterial = new THREE.MeshStandardMaterial({ color: 'lightblue' })
+const groundMaterial = new THREE.MeshStandardMaterial({ color: 'lightgray' })
 const groundGeometry = new THREE.PlaneGeometry(10, 10)
 groundGeometry.rotateX(-Math.PI * 0.5)
 const ground = new THREE.Mesh(groundGeometry, groundMaterial)
